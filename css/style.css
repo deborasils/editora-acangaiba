@@ -1,0 +1,325 @@
+
+/* =================================
+   IDENTIDADE VISUAL ACANGAIBA
+================================= */
+
+:root {
+    --terra: #653C2D;
+    --terracota: #A65F3E;
+    --ocre: #D2A56F;
+    --areia: #E9DDC6;
+    --folha: #39483A;
+    --creme: #F7F2E9;
+    --texto: #35271F;
+}
+
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--creme);
+    color: var(--texto);
+    font-family: Georgia, serif;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* CABEÇALHO */
+
+.header {
+    background: var(--creme);
+    padding: 22px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--areia);
+}
+
+.logo {
+    color: var(--terra);
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--terracota);
+}
+
+.logo small {
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.navigation {
+    display: flex;
+    gap: 22px;
+}
+
+.navigation a {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: var(--terra);
+    transition: color 0.3s;
+}
+
+.navigation a:hover {
+    color: var(--terracota);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 27px;
+    color: var(--terra);
+    cursor: pointer;
+}
+
+
+/* APRESENTAÇÃO PRINCIPAL */
+
+.hero {
+    min-height: 570px;
+    padding: 100px 10%;
+    background:
+        linear-gradient(
+            110deg,
+            var(--areia),
+            #D9BE9C
+        );
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.eyebrow {
+    color: var(--terracota);
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    color: var(--terra);
+    font-size: clamp(42px, 6vw, 75px);
+    line-height: 1.1;
+    margin: 22px 0;
+}
+
+.hero p {
+    max-width: 520px;
+    margin-bottom: 30px;
+    font-size: 17px;
+}
+
+.hero-art {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: var(--terra);
+    color: var(--areia);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    letter-spacing: 3px;
+    font-size: 11px;
+    outline: 2px solid var(--terracota);
+    outline-offset: 9px;
+    flex-shrink: 0;
+}
+
+
+/* BOTÕES */
+
+.button {
+    display: inline-block;
+    padding: 13px 25px;
+    background: var(--terra);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: var(--terracota);
+}
+
+
+/* SEÇÕES */
+
+.section {
+    padding: 90px 12%;
+}
+
+.section h2 {
+    color: var(--terra);
+    font-size: clamp(30px, 4vw, 43px);
+    margin: 15px 0;
+}
+
+.section p {
+    max-width: 700px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.about {
+    background: var(--creme);
+}
+
+.collection {
+    background: var(--areia);
+}
+
+.projects {
+    background: #F0E7D9;
+}
+
+.gallery {
+    background: var(--folha);
+    color: var(--creme);
+}
+
+.gallery h2 {
+    color: var(--areia);
+}
+
+.gallery .eyebrow {
+    color: var(--ocre);
+}
+
+.sound {
+    background: #E4D0B4;
+}
+
+.contact {
+    background: var(--terra);
+    color: var(--creme);
+}
+
+.contact h2 {
+    color: var(--areia);
+}
+
+.contact .eyebrow {
+    color: var(--ocre);
+}
+
+.contact .button {
+    background: var(--ocre);
+    color: var(--terra);
+}
+
+
+/* ESPAÇOS DE CONTEÚDO */
+
+.empty-content {
+    margin-top: 30px;
+    padding: 35px;
+    border: 1px dashed var(--terracota);
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+
+/* RODAPÉ */
+
+.footer {
+    background: #30251F;
+    color: var(--areia);
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.footer-logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.footer p {
+    margin: 10px 0;
+}
+
+.footer small {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+}
+
+
+/* RESPONSIVIDADE PARA CELULARES */
+
+@media (max-width: 850px) {
+
+    .header {
+        padding: 18px 6%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--creme);
+        flex-direction: column;
+        padding: 25px 7%;
+        border-top: 1px solid var(--areia);
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 75px 8%;
+    }
+
+    .hero-art {
+        width: 210px;
+        height: 210px;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section {
+        padding: 65px 8%;
+    }
+}
